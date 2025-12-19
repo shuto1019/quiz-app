@@ -17,4 +17,9 @@ Route::middleware('auth')->group(function () {
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 });
 
+//管理画面
+//TOPページ
+Route::get('/admin/top', function (){
+    return view('admin.top');
+});
 require __DIR__.'/auth.php';
